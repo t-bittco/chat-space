@@ -1,0 +1,51 @@
+.side_body{
+  background-color: #2f3e51;
+  height: 100vh;
+  width: 300px;
+  float: left;
+}
+
+.side_header {
+  
+  width: 260px;
+  background-color: #253141;
+  
+  padding: 30px 20px ;
+  
+  display: flex;
+  
+  &__name { 
+    color: #ffffff;
+    font-size: 16px;
+    font-weight:bold;
+  }
+  &__lists{
+
+    text-align: right;
+    padding-left: 120px;
+  }
+  &__btn{
+  color:#fff;
+  text-decoration: none;
+  padding-right:5px;
+  
+  }
+}
+.group {
+  
+  
+  width: 260px;
+  padding: 20px 40px 20px 20px;
+  
+  color: #ffffff;
+  &__name { 
+    font-size: 15px;
+    font-style: bold;
+    color: #ffffff;
+  }
+  &__message { 
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+}
