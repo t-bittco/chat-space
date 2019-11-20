@@ -1,0 +1,33 @@
+.main_body
+  .container
+    .headers
+      .headers__name
+        group_name
+      .headers__member
+        member:
+  
+    .f-container
+      .f-container__top
+        Edit
+      .f-container__right
+
+  .section
+    .message
+      .message__text
+        .message__name
+          nakamura
+        .message__date.message__text
+          2019/11/17/ 14:39
+      .message__comment
+        this is a first message
+
+    .form
+      .form__text
+        .form__message
+          %input{ name:"message", placeholder:"type a message",type: "text",class:"text-line"}
+        .form__image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image', class:"icon")
+            %input{type: "file", class:"file"}
+      .form__send
+        %input{type:"submit", value:"Send",class:"send"} 
