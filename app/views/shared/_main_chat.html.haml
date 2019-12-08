@@ -1,0 +1,80 @@
+-# .main_body
+-#   .container
+-#     .headers
+-#       .headers__name
+-#         group_name
+-#       .headers__member
+-#         member:
+  
+-#     .f-container
+-#       .f-container__top
+-#         -# = link_to edit_group_path do
+-#         %p Edit
+-#       .f-container__right
+
+-#   .section
+-#     .message
+      
+-#       .message__text
+-#         .message__name
+-#           nakamura
+-#         .message__date.message__text
+-#           2019/11/17/ 14:39
+-#       .message__comment
+-#         this is a first message
+    
+-#     .form
+-#       = form_for [@group, @message] do |f|
+-#         .form__text
+-#           = f.text_field :content, class: 'text-line', placeholder: 'type a message'
+-#           .form__message
+            
+-#           .form__image
+-#             = f.label :image, class: 'input-box__image' do
+-#               = icon('fas', 'image', class:"icon")
+-#               = f.file_field :image, class: 'file'
+            
+-#         .form__send
+-#           = f.submit 'Send', class: 'send'
+
+.main_body
+  .container
+    .headers
+      .headers__name
+        = @group.name
+      .headers__member
+        - member = 'Member: '
+        - @group.users.each do |user|
+          - member += user.name + ' '
+        %p #{member}
+            
+  
+    .f-container
+      .f-container__top
+        = link_to "Edit", edit_group_path(params[:group_id]), class:'f-container__btn'
+      .f-container__right
+
+  .messages
+    = render @messages
+    -# .message
+      
+    -#   .message__text
+    -#     .message__name
+    -#       nakamura
+    -#     .message__date.message__text
+    -#       2019/11/17/ 14:39
+    -#   .message__comment
+    -#     this is a first message
+    
+  .form
+    = form_for [@group, @message] do |f|
+      .form__text
+        .form__message
+          = f.text_field :content, class: 'text-line', placeholder: 'type a message'
+        .form__image
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class:"icon")
+            = f.file_field :image, class: 'file'
+            
+      .form__send
+        = f.submit 'Send', class: 'send'

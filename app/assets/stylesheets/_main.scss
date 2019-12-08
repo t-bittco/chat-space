@@ -51,6 +51,14 @@
     // width: calc(100% - 40px);
 
   }
+  &__btn{
+    // margin: 28px 0 auto;
+    // padding: 5px 20px;
+    color: rgb(0, 183, 255);
+    // border: 1px solid rgb(0, 183, 255);
+    // width: calc(100% - 40px);
+    text-decoration: none;
+  }
   &__right{
     
     height: 100%;
@@ -61,34 +69,33 @@
 
 }
 
-.section{
-  background-color: #fafafa;
-  height: calc(100vh - 99px);
-  
-}
-.message{
-  padding-left:40px;
-  padding-top: 46px;
-
-  &__text{
-    display: flex;
-  }
-  
-  &__name{
-    padding-right: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #434A54;
-  }
-  &__date{
-    font-size: 12px;
-    color: #999999;
-  }
-  
-  &__comment{
-    padding-top: 10px;
-    font-size: 14px;
-    color: #434A54;
+.messages {
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  padding: 46px 40px 0;
+  height: calc(100% - 100px - 90px);
+  .message {
+    .upper-message {
+      display: flex;
+      &__user-name {
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__date {
+        color:#999999;
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    .lower-message {
+      margin-top: 10px;
+      &__content {
+        color: black;
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 
@@ -98,7 +105,7 @@
   background-color: #ddd;
   
   width: calc(100% - 40px);
-  display: flex;
+  
   padding: 10px 0px 10px 40px;
   
   &__text{
@@ -156,5 +163,8 @@
   padding: 10px;
   margin:  3.5px 0;
   
+}
+.new_message{
+  display:flex;
 }
 
