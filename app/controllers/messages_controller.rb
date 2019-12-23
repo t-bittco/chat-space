@@ -20,7 +20,6 @@ class MessagesController < ApplicationController
         render :index
       end
     end
-    # binding.pry
   end
 
   

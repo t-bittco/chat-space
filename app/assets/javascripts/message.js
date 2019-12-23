@@ -20,7 +20,7 @@ $(function(){
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault()
-    // console.log('イベント')
+  
     var formData = new FormData(this)
     var url = $(this).attr('action');
     $.ajax({
@@ -35,7 +35,7 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('#new_message').get(0).reset();
-      //データ受け取り後画面最下部までスクロール
+      
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(){
@@ -44,8 +44,6 @@ $(function(){
     .always(function(){
       $(":submit").removeAttr("disabled");
     });
-    // console.log
-    // console.logを用いてイベント発火しているか確認
   })
 })
 
